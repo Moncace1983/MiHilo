@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiHilo - Ingreso al Sistema</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/imagenes/favicon.ico"
+    />
+    <link rel="stylesheet" href="/consulta_inventario/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img
+          src="/imagenes/logo2.png"
+          alt="Logo Confecciones Claudia"
+          class="logo"
+        />
+        <h1>Confecciones Claudia Ltda.</h1>
+      </div>
+    </header>
+
+    <main>
+        <h2>Consulta de Inventario</h2>
+        
+        <label for="tipo-inventario">Selecciona el tipo de inventario:</label>
+
+        <select id="tipo-inventario" onchange="consultarInventario()">
+        <option value="todos">Todos</option>
+        <option value="insumo">Insumos</option>
+        <option value="producto">Productos Terminados</option>
+        </select>
+
+        <div>
+          
+          <label for="tipo-busquedad">Selecciona el tipo de busquedad</label>
+          <select id="tipo-busquedad" onchange="tipoBusquedad()">
+            <option value="descripcion">Descripcion</option>
+            <option value="codigo">Codigo</option>
+          </select>
+          <input type="text" id="buscador" placeholder="Buscar">
+          <button type="button" onclick="buscarInventario()">Buscar</button>
+        
+        </div>
+        
+        <section id="tabla-inventario">
+            <h3>Resultados del Inventario</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Cantidad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="cuerpo-tabla-inventario">
+                    <!-- Aquí se agregarán los elementos del inventario dinámicamente -->
+                </tbody>
+            
+            </table>
+        </section>
+    </main>
+     
+    <footer>
+      <p>
+        &copy; 2024 Confecciones Claudia Ltda. - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiHilo - Ingreso al Sistema</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/imagenes/favicon.ico"
+    />
+    <link rel="stylesheet" href="/crear_orden_compra/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img
+          src="/imagenes/logo2.png"
+          alt="Logo Confecciones Claudia"
+          class="logo"
+        />
+        <h1>Confecciones Claudia Ltda.</h1>
+      </div>
+    </header>
+
+  </nav>
+    
+  </heade
+</header>
+
+  <main>
+    <h2>Crear Pedido</h2>
+      <form id="form-pedido">
+          <label for="codigo">Código del Pedido:</label>
+          <input type="text" id="codigo" name="codigo" required>
+          <label for="cliente">Cliente:</label>
+          <input type="text" id="cliente" name="cliente" required>
+          <fieldset>
+              <legend>Agregar Producto</legend>
+              <label for="producto">Producto:</label>
+              <input type="text" id="producto" name="producto" required>
+              <label for="cantidad">Cantidad:</label>
+              <input type="number" id="cantidad" name="cantidad" required>
+              <button type="button" onclick="agregarProductoPedido()">Agregar Producto</button>
+          </fieldset>
+      </form>
+
+      <section id="tabla-productos-pedido">
+          <h3>Productos Agregados</h3>
+          
+          <table>
+              
+          <thead>
+                  <tr>
+                      <th>Producto</th>
+                      <th>Cantidad</th>
+                      <th>Acciones</th>
+                  </tr>
+          </thead>
+          <tbody id="cuerpo-tabla-productos-pedido">
+                  <!-- Aquí se agregarán los productos dinámicamente -->
+              </tbody>
+          </table>
+      </section>
+
+      <button type="button" onclick="crearPedido()">Crear Pedido</button>
+
+      <section id="tabla-pedidos">
+          
+       
+<h3>Listado de Pedidos</h3>
+          
+          <table>
+              
+         <thead>
+                  <tr>
+                      <th>Código</th>
+                      <th>Cliente</th>
+                      <th>Productos</th>
+                  </tr>
+              
+             </thead>
+              
+         
+
+
+<tbody id="cuerpo-tabla-pedidos">
+                  
+              <!-- Aquí se agregarán los pedidos dinámicamente -->
+              
+</tbody>
+          
+</table>
+</section>
+</main>
+
+    <footer>
+      <p>
+        &copy; 2024 Confecciones Claudia Ltda. - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

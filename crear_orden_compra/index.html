@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiHilo - Ingreso al Sistema</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/imagenes/favicon.ico"
+    />
+    <link rel="stylesheet" href="/crear_orden_compra/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img
+          src="/imagenes/logo2.png"
+          alt="Logo Confecciones Claudia"
+          class="logo"
+        />
+        <h1>Confecciones Claudia Ltda.</h1>
+      </div>
+    </header>
+
+    <main>
+      <h2>Crear Orden de Compra</h2>
+      <form id="form-orden-compra">
+          <label for="codigo">Numero de la Orden:</label>
+          <input type="text" id="codigo" name="codigo" required>
+          
+          <label for="proveedor">Proveedor:</label>
+          <input type="text" id="proveedor" name="proveedor" required>
+          
+          <fieldset>
+              <legend>Agregar Producto</legend>
+              <label for="producto">Producto:</label>
+              <input type="text" id="producto" name="producto" required>
+              
+              <label for="cantidad">Cantidad:</label>
+              <input type="number" id="cantidad" name="cantidad" required>
+              
+              <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+          </fieldset>
+      </form>
+
+      <section id="tabla-productos">
+          <h3>Productos Agregados</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Producto</th>
+                      <th>Cantidad</th>
+                      <th>Acciones</th>
+                  </tr>
+              </thead>
+              <tbody id="cuerpo-tabla-productos">
+                  <!-- Aquí se agregarán los productos dinámicamente -->
+              </tbody>
+          </table>
+      </section>
+
+      <button type="button" onclick="crearOrdenCompra()">Crear Orden de Compra</button>
+
+      <section id="tabla-ordenes">
+          <h3>Listado de Órdenes de Compra</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Código</th>
+                      <th>Proveedor</th>
+                      <th>Productos</th>
+                  </tr>
+              </thead>
+              <tbody id="cuerpo-tabla-ordenes">
+                  <!-- Aquí se agregarán las órdenes de compra dinámicamente -->
+              </tbody>
+          </table>
+      </section>
+  </main>
+  
+
+    <footer>
+      <p>
+        &copy; 2024 Confecciones Claudia Ltda. - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

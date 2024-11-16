@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiHilo - Ingreso al Sistema</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/imagenes/favicon.ico"
+    />
+    <link rel="stylesheet" href="/cambiar_contraseña/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img
+          src="/imagenes/logo2.png"
+          alt="Logo Confecciones Claudia"
+          class="logo"
+        />
+        <h1>Confecciones Claudia Ltda.</h1>
+      </div>
+    </header>
+
+    <main>
+      <h2>Cambio de Contraseña</h2>
+      <form id="form-cambio-contraseña">
+          <label for="contraseña-actual">Contraseña Actual:</label>
+          <input type="password" id="contraseña-actual" name="contraseña-actual" required>
+          
+          <label for="nueva-contraseña">Nueva Contraseña:</label>
+          <input type="password" id="nueva-contraseña" name="nueva-contraseña" required>
+          
+          <label for="confirmar-contraseña">Confirmar Nueva Contraseña:</label>
+          <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" required>
+          
+          <button type="button" onclick="cambiarContraseña()">Cambiar Contraseña</button>
+      </form>
+  </main>
+      
+    <footer>
+      <p>
+        &copy; 2024 Confecciones Claudia Ltda. - Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

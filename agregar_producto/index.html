@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiHilo - Ingreso al Sistema</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/imagenes/favicon.ico"
+    />
+    <link rel="stylesheet" href="/crear_producto/estilos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <img
+          src="/imagenes/logo2.png"
+          alt="Logo Confecciones Claudia"
+          class="logo"
+        />
+        <h1>Confecciones Claudia Ltda.</h1>
+      </div>
+    </header>
+</nav>
+          </header>
+      
+          <main>
+              <h2>Ingresar   Productos</h2>
+              
+        <form id="form-insumos">
+                  <label for="codigo">Código del Producto:</label>
+                  <input type="text" id="codigo" name="codigo" required>
+                  <label for="nombre">Nombre del Producto:</label>
+                  <input type="text" id="nombre" name="nombre" required>
+                  <label for="cantidad">Cantidad:</label>
+                  <input type="number" id="cantidad" name="cantidad" required>
+                  <label for="fecha">Fecha de ingreso:</label>
+                  <input type="date" id="fecha" name="fecha" required>
+                  <button type="button" onclick="agregarInsumo()">Agregar Producto</button>
+                  <button type="button" onclick="agregarInsumo()">Eliminar</button>
+          </form>
+      
+          <section id="tabla-insumos">
+                  <h3>Listado de Insumos</h3>
+                 <table>
+                      <thead>
+                          <tr>
+                              <th>Código</th>
+                              <th>Nombre</th>
+                              <th>Cantidad</th>
+                              <th>Fecha de Ingreso</th>
+                          </tr>
+                      </thead>
+                      <tbody id="cuerpo-tabla-insumos">
+                          <!-- Aquí se agregarán filas dinámicamente -->
+                      </tbody>
+                  </table>
+                  </section>
+                  </main>
+
+
+          <footer>
+              <p>© 2024 Confecciones Claudia Ltda.</p>
+      </footer>
+      
+          
+      
+        
+      <script src="app.js"></script>
+      </body>
+      
+      </
+      </html>
+      
+      
