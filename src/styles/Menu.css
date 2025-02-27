@@ -1,0 +1,59 @@
+.menu {
+  background-color: #f4f4f4;
+  border: solid 2px rgb(9, 198, 198);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  position: fixed;
+  margin-top: 130px;
+  top: 0;
+  left: 0;
+  height: 55%;
+  transition: transform 0.3s ease;
+}
+
+.menu.hidden {
+  transform: translateX(-100%);
+}
+
+.menu.visible {
+  transform: translateX(0);
+}
+
+.toggle-button {
+  position: absolute;
+  width: 40px;
+  top: 10px;
+  right: -25px;
+  background-color: rgb(9, 198, 198);
+  border: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu nav ul li {
+  margin-bottom: 10px;
+}
+
+.menu nav ul li a {
+  text-decoration: none;
+  color: rgb(9, 198, 198);
+  padding: 20px;
+  text-align: center;
+  border: solid 1px rgb(9, 198, 198);
+  border-radius: 10px;
+  display: block;
+  margin-top: 25px;
+}
+
+.menu nav ul li a:hover {
+  background-color: rgb(9, 198, 198);
+  color: white;
+}

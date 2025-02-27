@@ -1,0 +1,112 @@
+.gestion-ordenes-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.906);
+  border-radius: 10px;
+}
+
+.gestion-ordenes-container h2,
+.gestion-ordenes-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(9, 198, 198);
+}
+
+.gestion-ordenes-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.gestion-ordenes-container form select,
+.gestion-ordenes-container form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline-color: rgb(9, 198, 198);
+}
+
+.gestion-ordenes-container form .item {
+  display: flex;
+  gap: 10px;
+}
+
+.gestion-ordenes-container form .item input {
+  flex: 1;
+}
+
+.remove-button {
+  padding: 10px;
+  background-color: rgb(9, 198, 198);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #fff;
+  color: rgb(9, 198, 198);
+  border: solid 2px rgb(9, 198, 198);
+}
+
+.add-button {
+  padding: 10px;
+  width: 300px;
+  background-color: rgb(9, 198, 198);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: white;
+  color: rgb(9, 198, 198);
+  border: solid 2px rgb(9, 198, 198);
+}
+
+.submit-button {
+  padding: 10px;
+  width: 300px;
+  background-color: rgb(9, 198, 198);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: white;
+  color: rgb(9, 198, 198);
+  border: solid 2px rgb(9, 198, 198);
+}
+
+.gestion-ordenes-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gestion-ordenes-container ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.gestion-ordenes-container ul li button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.gestion-ordenes-container ul li button:hover {
+  background-color: #0056b3;
+}

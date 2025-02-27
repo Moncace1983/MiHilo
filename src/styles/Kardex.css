@@ -1,0 +1,83 @@
+.kardex-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.942);
+    border-radius: 10px;
+    color: rgb(9,198,198);
+  }
+  
+  .kardex-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+  
+  .search-bar-kardex {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .search-bar-kardex input {
+    width: 60%;
+    padding: 8px;
+    box-sizing: border-box;
+    opacity: 0.8;
+    border-radius: 10px;
+    outline-color: rgb(9,198,198);
+  }
+  
+  .search-bar-kardex select {
+    width: 25%;
+    padding: 10px;
+    margin-left: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    outline-color: rgb(9,198,198);
+  }
+
+  .search-button-kardex {
+    width: 8%;
+    padding: 8px;
+    margin: 5px;
+    background-color: rgb(9,198,198);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-button-kardex:hover {
+    background-color: white;
+    border: solid 2px rgb(9,198,198);
+    color: rgb(9,198,198);
+  }
+  
+  .search-button-kardex svg {
+    height: 1em;
+    width: 1em;
+  }
+  
+  .kardex-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .kardex-table th,
+  .kardex-table td {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .kardex-table th {
+    background-color: rgb(9,198,198);
+    color: white;
+  }
+  
