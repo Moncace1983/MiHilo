@@ -2,7 +2,7 @@
   "name": "my-inventory-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@babel/core": "^7.26.9",
     "@babel/preset-env": "^7.26.9",
