@@ -1,34 +1,89 @@
+.container-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60%;
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
 .home {
-    display: flex;
-    width: 200%;
-    flex-direction: column;
-    text-align: center;
-    margin-top:10px;
-    margin-right: 120px;
-    justify-content: space-between;
-    height: 50vh;
-    color:rgb(9,198,198);
+  flex: 1;
+  padding: 10px;
+  height: 60%;
+  text-align: center;
+  margin: 10px;
+}
+
+.imagen-home {
+  flex: 1;
+  text-align: center;
+  margin: 15px;
 }
 
 .home h2 {
-    font-size: 1.5em;
-    color: rgb(9,198,198);
+  font-size: 2em;
+  color: rgb(9, 198, 198);
+  margin-bottom: 20px;
 }
 
 img {
-    width: 150%;
-    height: 65vh;
-    object-fit: cover;
-    margin-right: 50px;
+  width: 80%;
+  max-width: 600px;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .home button {
-    width: 50%;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  margin-top: 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: rgb(9, 198, 198);
+  color: white;
 }
 
 .home button:hover {
-    background-color: white;
-    color: rgb(9,198,198);
-    border: 2px solid rgb(9,198,198);
-    border-radius: 10px;
+  background-color: white;
+  color: rgb(9, 198, 198);
+  border: 2px solid rgb(9, 198, 198);
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  .container-home {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .home,
+  .imagen-home {
+    margin: 10px 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .home button {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home h2 {
+    font-size: 1.5em;
+  }
+
+  .home button {
+    width: 100%;
+  }
 }

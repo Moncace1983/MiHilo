@@ -1,9 +1,10 @@
 .sidebar {
-  background-color: #f4f4f4;
+  background-color: #ffff;
   border: solid 2px rgb(9, 198, 198);
   border-radius: 10px;
   padding: 20px;
-  width: 200px;
+  width: 20%;
+  height: 100px;
   position: fixed;
   margin-top: 130px;
   top: 0;
@@ -13,7 +14,7 @@
 }
 
 .sidebar.hidden {
-  transform: translateX(-100%);
+  transform: translateX(-93%);
 }
 
 .sidebar.visible {
@@ -45,7 +46,7 @@
 .sidebar nav ul li a {
   text-decoration: none;
   color: rgb(9, 198, 198);
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   border: solid 1px rgb(9, 198, 198);
   border-radius: 10px;

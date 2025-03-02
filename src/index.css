@@ -25,11 +25,11 @@ code {
 }
 
 .content.shifted {
-    margin-left: 250px;
-    width: calc(100% - 250px);
+    margin-left: 220px;
+    width: calc(80% - 180px);
 }
 
 .sidebar{
-    width: 250px;
+    width: 180px;
 }
 

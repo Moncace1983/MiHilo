@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/AuthForm.css";
+import "../styles/CambiarContraseña.css";
 
 const CambiarContraseña = () => {
   const [username, setUsername] = useState("");
@@ -28,7 +28,7 @@ const CambiarContraseña = () => {
   };
 
   return (
-    <div className="auth-container">
+    <div className="password-container">
       <h2>Cambiar Contraseña</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
