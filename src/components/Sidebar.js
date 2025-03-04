@@ -4,8 +4,11 @@ import "../styles/Sidebar.css";
 
 const Sidebar = ({ isVisible, toggleSidebar }) => {
   const location = useLocation();
-  const hideSidebar = ["/login", "/cambiar-contraseña"].includes(location.pathname);
 
+  // Comprobamos si estamos en una pagina donde el Sidebar debe ocultarse
+  const hideSidebar = ["/login", "/cambiar-contraseña"].includes(location.pathname);
+  
+  // Si la ruta actual es una de las que debe ocultar el Sidebar, retornamos null
   if (hideSidebar) {
     return null;
   }
