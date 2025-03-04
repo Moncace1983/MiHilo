@@ -33,6 +33,36 @@
   border-radius: 4px;
 }
 
+/* Estilo para el botón de alternancia */
+.toggle-button {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo cuando el menú está abierto */
+.toggle-button.opened {
+    color: green; /* Cambia el color a verde cuando el menú está abierto */
+    transform: rotate(180deg); /* Gira el botón cuando está abierto */
+}
+
+/* Estilo cuando el menú está cerrado */
+.toggle-button.closed {
+    color: red; /* Cambia el color a rojo cuando el menú está cerrado */
+    transform: rotate(0deg); /* El botón se mantiene recto cuando está cerrado */
+}
+
+/* Estilo para el menú (cuando está visible) */
+.menu.visible {
+    display: block;
+}
+
+/* Estilo para el menú (cuando está oculto) */
+.menu.hidden {
+    display: none;
+}
+
+
 .menu nav ul {
   list-style: none;
   padding: 0;
