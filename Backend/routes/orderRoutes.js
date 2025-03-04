@@ -1,5 +1,5 @@
-const express = require("express");
-const Order = require("../models/Order");
+import express from "express";
+import Order from "../models/Order.js";
 
 const router = express.Router();
 
@@ -43,4 +43,4 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

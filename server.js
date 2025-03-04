@@ -1,8 +1,8 @@
-const express = require("express");
-const cors = require("cors");
-const sequelize = require("./Backend/config/database");
-const userRoutes = require("./Backend/routes/userRoutes");
-const orderRoutes = require("./Backend/routes/orderRoutes");
+import express from "express";
+import cors from "cors";
+import sequelize from "./Backend/config/database.js";
+import userRoutes from "./Backend/routes/userRoutes.js";
+import orderRoutes from "./Backend/routes/orderRoutes.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;

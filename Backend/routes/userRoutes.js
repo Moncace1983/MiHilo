@@ -1,8 +1,7 @@
-// filepath: /c:/Users/USER/my-inventory-app/routes/userRoutes.js
-const express = require("express");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const User = require("../models/User");
+import express from "express";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import User from "../models/User.js";
 
 const router = express.Router();
 
@@ -58,4 +57,4 @@ router.post("/change-password", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
