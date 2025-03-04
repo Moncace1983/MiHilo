@@ -5,7 +5,10 @@ import '../styles/Menu.css';
 const Menu = ({ isVisible, toggleSidebar }) => {
     return (
         <div className={`menu ${isVisible ? 'visible' : 'hidden'}`}>
-            <button className="toggle-button" onClick={toggleSidebar}>
+            <button
+                className={`toggle-button ${isVisible ? 'opened' : 'closed'}`}
+                onClick={toggleSidebar}
+            >
                 {isVisible ? '◀' : '▶'}
             </button>
             {isVisible && (
@@ -23,4 +26,5 @@ const Menu = ({ isVisible, toggleSidebar }) => {
 };
 
 export default Menu;
+
 
