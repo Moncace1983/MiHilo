@@ -34,6 +34,37 @@
   border-radius: 4px;
 }
 
+/* Estilo para el botón de alternancia en el Sidebar */
+.toggle-button {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Estilo cuando el Sidebar está abierto */
+.toggle-button.opened {
+    color: green; /* Cambia el color a verde cuando el sidebar está abierto */
+    transform: rotate(180deg); /* Gira el botón cuando está abierto */
+}
+
+/* Estilo cuando el Sidebar está cerrado */
+.toggle-button.closed {
+    color: red; /* Cambia el color a rojo cuando el sidebar está cerrado */
+    transform: rotate(0deg); /* El botón se mantiene recto cuando está cerrado */
+}
+
+/* Estilo para el Sidebar (cuando está visible) */
+.sidebar.visible {
+    display: block;
+    /* Agrega cualquier otro estilo que necesites para el sidebar visible */
+}
+
+/* Estilo para el Sidebar (cuando está oculto) */
+.sidebar.hidden {
+    display: none;
+}
+
+
 .sidebar nav ul {
   list-style: none;
   padding: 0;
