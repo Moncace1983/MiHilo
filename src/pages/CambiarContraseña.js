@@ -66,6 +66,7 @@ const CambiarContraseña = () => {
         </div>
         <button type="submit">Cambiar Contraseña</button>
       </form>
+       <a href="/login">Volver</a>       
     </div>
   );
 };
