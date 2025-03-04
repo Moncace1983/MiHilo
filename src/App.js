@@ -24,22 +24,30 @@ const App = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
-  const showMenu = ["/", "/sobre-nosotros", "/empleo", "/contacto"].includes(
-    location.pathname
-  );
+  // Rutas donde se debe ocultar el Sidebar y el Menu
   const hideSidebarAndMenu = ["/login", "/cambiar-contraseña"].includes(
     location.pathname
   );
 
+  // Rutas donde se debe mostrar el Menu
+  const showMenu = ["/", "/sobre-nosotros", "/empleo", "/contacto"].includes(
+    location.pathname
+  );
+  
+
   return (
     <div className="app">
       <Header />
+
+    {/* Condicional para mostrar Sidebar o Menu basado en las rutas */}
       {!hideSidebarAndMenu &&
         (showMenu ? (
           <Menu isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
         ) : (
           <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
         ))}
+
+  {/*Contenido principal */}
       <div
         className={`content ${
           isSidebarVisible && !hideSidebarAndMenu ? "shifted" : ""
