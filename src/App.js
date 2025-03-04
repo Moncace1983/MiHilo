@@ -15,6 +15,7 @@ import Informes from "./pages/Informes.js";
 import Login from "./pages/Login.js";
 import Inicio from "./pages/Inicio.js";
 import CambiarContraseña from "./pages/CambiarContraseña.js";
+import Register from "./pages/Register.js";
 
 const App = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(true);
@@ -65,6 +66,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/cambiar-contraseña" element={<CambiarContraseña />} />
+          <Route path="/registro" element={<Register />} />
           <Route path="*" element={<h1>404 Not found</h1>} />
         </Routes>
       </div>
