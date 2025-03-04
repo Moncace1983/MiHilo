@@ -21,6 +21,7 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
       {isVisible && (
         <nav>
           <ul>
+            <li><Link to="/menu">Menú</Link></li>
             <li><Link to="/kardex">Kardex</Link></li>
             <li><Link to="/gestion-ordenes">Gestión Órdenes</Link></li>
             <li><Link to="/gestion-productos">Gestión Productos</Link></li>
