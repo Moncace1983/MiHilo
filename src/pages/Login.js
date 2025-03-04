@@ -70,7 +70,8 @@ const Login = () => {
         <button type="submit">Ingresar</button>
       </form>
       <div className="links">
-        <a href="/cambiar-contraseña">Olvidé mi contraseña</a>
+        <a href="/cambiar-contraseña">Olvidé mi contraseña</a> |
+        <a href="/registro">Registrarse</a>
       </div>
     </div>
   );
