@@ -10,34 +10,23 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Usuario y contraseña de prueba
-    const testUsername = " ";
-    const testPassword = " ";
-
-    if (username === testUsername && password === testPassword) {
-      // Simular una respuesta exitosa del servidor
-      const data = { token: "fake-jwt-token" };
-      localStorage.setItem("token", data.token);
-      navigate("/inicio");
-    } else {
-      try {
-        const response = await fetch("/api/users/login", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ username, password }),
-        });
-        const data = await response.json();
-        if (response.ok) {
-          localStorage.setItem("token", data.token);
-          navigate("/inicio");
-        } else {
-          alert(data.error);
-        }
-      } catch (error) {
-        console.error("Error al iniciar sesión", error);
+    try {
+      const response = await fetch("/api/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        localStorage.setItem("token", data.token);
+        navigate("/inicio");
+      } else {
+        alert(data.error);
       }
+    } catch (error) {
+      console.error("Error al iniciar sesión", error);
     }
   };
 

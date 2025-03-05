@@ -41,7 +41,7 @@ const App = () => {
     <div className="app">
       <Header />
 
-      {/* Condicional para mostrar Sidebar o Menu basado en las rutas, Pasar handleLogout como prop a Sidebar */}
+      {/* Condicional para mostrar Sidebar o Menu basado en las rutas */}
       {!hideSidebarAndMenu &&
         (showMenu ? (
           <Menu isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
@@ -53,7 +53,7 @@ const App = () => {
           />
         ))}
 
-      {/*Contenido principal */}
+      {/* Contenido principal */}
       <div
         className={`content ${
           isSidebarVisible && !hideSidebarAndMenu ? "shifted" : ""
@@ -74,3 +74,4 @@ const App = () => {
 };
 
 export default App;
+

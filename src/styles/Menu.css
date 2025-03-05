@@ -52,20 +52,6 @@
     transform: rotate(0deg); /* El botón se mantiene recto cuando está cerrado */
 }
 
-<<<<<<< HEAD
-=======
-/* Estilo para el menú (cuando está visible) */
-.menu.visible {
-    display: block;
-}
-
-/* Estilo para el menú (cuando está oculto) */
-.menu.hidden {
-    display: none;
-}
-
-
->>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
 .menu nav ul {
   list-style: none;
   padding: 0;

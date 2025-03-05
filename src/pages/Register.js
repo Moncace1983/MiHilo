@@ -16,24 +16,23 @@ const Register = () => {
         headers: {
           "Content-Type": "application/json",
         },
-body: JSON.stringify({ username, password, email }),
+        body: JSON.stringify({ username, password, email }),
       });
-      await response.json();
-      alert("Usuario registrado exitosamente");
-    navigate("/login");
-  } catch (error) {
-    if (error.name === "SequelizeUniqueConstraintError") {
-      alert("El usuario ya existe");
-    } else {
-      alert("Error al registrar el usuario");
+      const data = await response.json();
+      if (response.ok) {
+        alert("Usuario registrado exitosamente");
+        navigate("/login");
+      } else {
+        alert(data.error);
+      }
+    } catch (error) {
       console.error("Error al registrar el usuario", error);
     }
-  }
 };
 
-  return (
+return (
     <div className="register-container">
-      <h2>Registrar Usuario</h2>
+      <h2>Registrarse</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username">Nombre de Usuario</label>
@@ -68,7 +67,7 @@ body: JSON.stringify({ username, password, email }),
             required
           />
         </div>
-        <button className="button-register" type="submit">Registrarse</button>
+        <button type="submit">Registrarse</button>
       </form>
     </div>
   );
