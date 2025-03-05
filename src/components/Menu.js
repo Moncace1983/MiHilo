@@ -27,3 +27,4 @@ const Menu = ({ isVisible, toggleSidebar }) => {
 
 export default Menu;
 
+

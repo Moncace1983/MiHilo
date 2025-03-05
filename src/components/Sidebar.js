@@ -21,12 +21,20 @@ const Sidebar = ({ isVisible, toggleSidebar,handleLogout }) => {
       {isVisible && (
         <nav>
           <ul>
+<<<<<<< HEAD
             <li><Link to="/inicio">Menú</Link></li>
+=======
+            <li><Link to="/menu">Menú</Link></li>
+>>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
             <li><Link to="/kardex">Kardex</Link></li>
             <li><Link to="/gestion-ordenes">Gestión Órdenes</Link></li>
             <li><Link to="/gestion-productos">Gestión Productos</Link></li>
             <li><Link to="/informes">Informes</Link></li>
+<<<<<<< HEAD
             <li><button className="button-sidebar" onClick={handleLogout}>Cerrar Sesión</button></li>
+=======
+            <li><button onClick={handleLogout}>Cerrar Sesión</button></li>
+>>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
           </ul>
         </nav>
       )}
@@ -34,4 +42,9 @@ const Sidebar = ({ isVisible, toggleSidebar,handleLogout }) => {
   );
 };
 
+<<<<<<< HEAD
 export default Sidebar;
+=======
+export default Sidebar;
+
+>>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b

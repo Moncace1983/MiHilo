@@ -9,6 +9,7 @@ const router = express.Router();
 router.post("/register", async (req, res) => {
   const { username, password, email } = req.body;
   try {
+<<<<<<< HEAD
     // Verificar si el usuario ya existe
     const existingUser = await User.findOne({ where: { username } });
     if (existingUser) {
@@ -24,6 +25,12 @@ router.post("/register", async (req, res) => {
       password: hashedPassword,
       email,
     });
+=======
+    // Hashear la contraseña del usuario
+    const hashedPassword = await bcrypt.hash(password, 10);
+    // Crear un nuevo usuario en la base de datos
+    const user = await User.create({ username, password: hashedPassword });
+>>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
     res.status(201).json({ message: "Usuario registrado exitosamente" });
   } catch (error) {
     res.status(400).json({ error: "Error al registrar el usuario" });
