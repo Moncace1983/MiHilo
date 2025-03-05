@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Sidebar.css";
 
-const Sidebar = ({ isVisible, toggleSidebar }) => {
+const Sidebar = ({ isVisible, toggleSidebar,handleLogout }) => {
   const location = useLocation();
   const hideSidebar = ["/login", "/cambiar-contraseña"].includes(location.pathname);
 
@@ -12,24 +12,21 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
 
   return (
     <div className={`sidebar ${isVisible ? "visible" : "hidden"}`}>
-      <button className="toggle-button" onClick={toggleSidebar}>
+      <button
+        className={`toggle-button ${isVisible ? "opened" : "closed"}`}
+        onClick={toggleSidebar}
+      >
         {isVisible ? "◀" : "▶"}
       </button>
       {isVisible && (
         <nav>
           <ul>
-            <li>
-              <Link to="/kardex">Kardex</Link>
-            </li>
-            <li>
-              <Link to="/gestion-ordenes">Gestión Órdenes</Link>
-            </li>
-            <li>
-              <Link to="/gestion-productos">Gestión Productos</Link>
-            </li>
-            <li>
-              <Link to="/informes">Informes</Link>
-            </li>
+            <li><Link to="/inicio">Menú</Link></li>
+            <li><Link to="/kardex">Kardex</Link></li>
+            <li><Link to="/gestion-ordenes">Gestión Órdenes</Link></li>
+            <li><Link to="/gestion-productos">Gestión Productos</Link></li>
+            <li><Link to="/informes">Informes</Link></li>
+            <li><button className="button-sidebar" onClick={handleLogout}>Cerrar Sesión</button></li>
           </ul>
         </nav>
       )}

@@ -11,8 +11,8 @@ const Login = () => {
     e.preventDefault();
 
     // Usuario y contraseña de prueba
-    const testUsername = "testuser";
-    const testPassword = "testpassword";
+    const testUsername = " ";
+    const testPassword = " ";
 
     if (username === testUsername && password === testPassword) {
       // Simular una respuesta exitosa del servidor
@@ -70,7 +70,8 @@ const Login = () => {
         <button type="submit">Ingresar</button>
       </form>
       <div className="links">
-        <a href="/cambiar-contraseña">Olvidé mi contraseña</a>
+        <a href="/cambiar-contraseña">Olvidé mi contraseña</a> |
+        <a href="/registro">Registrarse</a>
       </div>
     </div>
   );

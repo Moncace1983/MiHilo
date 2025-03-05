@@ -15,6 +15,7 @@ import Informes from "./pages/Informes.js";
 import Login from "./pages/Login.js";
 import Inicio from "./pages/Inicio.js";
 import CambiarContraseña from "./pages/CambiarContraseña.js";
+import Register from "./pages/Register.js";
 
 const App = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(true);
@@ -24,22 +25,42 @@ const App = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
+  // Definir la función handleLogout
+  const handleLogout = () => {
+    console.log("Cerrando sesión...");
+    localStorage.removeItem("token"); // Elimina el token de autenticación (si usas uno)
+    window.location.href = "/login"; // Redirige al login
+  };
+
+  // Rutas donde se debe ocultar el Sidebar y el Menu
+  const hideSidebarAndMenu = [
+    "/login",
+    "/cambiar-contraseña",
+    "/registro",
+  ].includes(location.pathname);
+
+  // Rutas donde se debe mostrar el Menu
   const showMenu = ["/", "/sobre-nosotros", "/empleo", "/contacto"].includes(
-    location.pathname
-  );
-  const hideSidebarAndMenu = ["/login", "/cambiar-contraseña"].includes(
     location.pathname
   );
 
   return (
     <div className="app">
       <Header />
+
+      {/* Condicional para mostrar Sidebar o Menu basado en las rutas, Pasar handleLogout como prop a Sidebar */}
       {!hideSidebarAndMenu &&
         (showMenu ? (
           <Menu isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
         ) : (
-          <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
+          <Sidebar
+            isVisible={isSidebarVisible}
+            toggleSidebar={toggleSidebar}
+            handleLogout={handleLogout}
+          />
         ))}
+
+      {/*Contenido principal */}
       <div
         className={`content ${
           isSidebarVisible && !hideSidebarAndMenu ? "shifted" : ""
@@ -57,6 +78,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/inicio" element={<Inicio />} />
           <Route path="/cambiar-contraseña" element={<CambiarContraseña />} />
+          <Route path="/registro" element={<Register />} />
           <Route path="*" element={<h1>404 Not found</h1>} />
         </Routes>
       </div>
