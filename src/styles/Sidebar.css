@@ -53,21 +53,6 @@
     transform: rotate(0deg); /* El botón se mantiene recto cuando está cerrado */
 }
 
-<<<<<<< HEAD
-=======
-/* Estilo para el Sidebar (cuando está visible) */
-.sidebar.visible {
-    display: block;
-    /* Agrega cualquier otro estilo que necesites para el sidebar visible */
-}
-
-/* Estilo para el Sidebar (cuando está oculto) */
-.sidebar.hidden {
-    display: none;
-}
-
-
->>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
 .sidebar nav ul {
   list-style: none;
   padding: 0;
