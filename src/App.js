@@ -25,7 +25,6 @@ const App = () => {
     setSidebarVisible(!isSidebarVisible);
   };
 
-<<<<<<< HEAD
   // Definir la función handleLogout
   const handleLogout = () => {
     console.log("Cerrando sesión...");
@@ -42,28 +41,14 @@ const App = () => {
 
   // Rutas donde se debe mostrar el Menu
   const showMenu = ["/", "/sobre-nosotros", "/empleo", "/contacto"].includes(
-=======
-  // Rutas donde se debe ocultar el Sidebar y el Menu
-  const hideSidebarAndMenu = ["/login", "/cambiar-contraseña"].includes(
->>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
     location.pathname
   );
-
-  // Rutas donde se debe mostrar el Menu
-  const showMenu = ["/", "/sobre-nosotros", "/empleo", "/contacto"].includes(
-    location.pathname
-  );
-  
 
   return (
     <div className="app">
       <Header />
 
-<<<<<<< HEAD
-      {/* Condicional para mostrar Sidebar o Menu basado en las rutas, Pasar handleLogout como prop a Sidebar */}
-=======
-    {/* Condicional para mostrar Sidebar o Menu basado en las rutas */}
->>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
+      {/* Condicional para mostrar Sidebar o Menu basado en las rutas */}
       {!hideSidebarAndMenu &&
         (showMenu ? (
           <Menu isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
@@ -75,11 +60,7 @@ const App = () => {
           />
         ))}
 
-<<<<<<< HEAD
-      {/*Contenido principal */}
-=======
-  {/*Contenido principal */}
->>>>>>> cbbae4486c893c76309958de1f92a810cfedd78b
+      {/* Contenido principal */}
       <div
         className={`content ${
           isSidebarVisible && !hideSidebarAndMenu ? "shifted" : ""
@@ -107,3 +88,4 @@ const App = () => {
 };
 
 export default App;
+
