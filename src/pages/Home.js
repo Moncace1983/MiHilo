@@ -7,18 +7,18 @@ import "../styles/Home.css";
 const Home = () => {
     return (
         <div className="container-home">
-        <div className="home">
-            <h2>Bienvenidos a Confecciones Claudia Ltda.</h2>
-            <p>Este es el sistema de gestión integral MiHilo.</p>
-            <p>Por favor inicie sesión para continuar.</p>
-            <Link to="/login">
-                <Button text="Iniciar Sesión" />
-            </Link>
+            <div className="home">
+                <h2>Bienvenidos a Confecciones Claudia Ltda.</h2>
+                <p>Este es el sistema de gestión integral MiHilo.</p>
+                <p>Por favor inicie sesión para continuar.</p>
+                <Link to="/login">
+                    <Button text="Iniciar Sesión" />
+                </Link>
+            </div>
+            <div className='imagen-home'>
+                <img src={images} alt="Confecciones Claudia Ltda." />
+            </div>
         </div>
-        <div className='imagen-home'>
-         <img src={images} alt="Confecciones Claudia Ltda." />
-         </div>
-         </ div>
     );
 };
 
